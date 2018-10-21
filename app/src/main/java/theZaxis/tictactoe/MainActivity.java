@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][0].getText().equals(buttons[0][1].getText()) && !buttons[0][0].getText().equals("")){
             if (buttons[0][0].getText().equals(buttons[0][2].getText())){
                 Toast.makeText(this, buttons[0][0].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[1][0].getText().equals(buttons[1][1].getText()) && !buttons[1][0].getText().equals("")){
             if (buttons[1][0].getText().equals(buttons[1][2].getText())){
                 Toast.makeText(this, buttons[1][0].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[2][0].getText().equals(buttons[2][1].getText()) && !buttons[2][0].getText().equals("")){
             if (buttons[2][0].getText().equals(buttons[2][2].getText())){
                 Toast.makeText(this, buttons[2][0].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][0].getText().equals(buttons[1][0].getText()) && !buttons[0][0].getText().equals("")){
             if (buttons[0][0].getText().equals(buttons[2][0].getText())){
                 Toast.makeText(this, buttons[0][0].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -105,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][1].getText().equals(buttons[1][1].getText()) && !buttons[0][1].getText().equals("")){
             if (buttons[0][1].getText().equals(buttons[2][1].getText())){
                 Toast.makeText(this, buttons[0][1].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -112,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][2].getText().equals(buttons[1][2].getText()) && !buttons[0][2].getText().equals("")){
             if (buttons[0][2].getText().equals(buttons[2][2].getText())){
                 Toast.makeText(this, buttons[0][2].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -119,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][0].getText().equals(buttons[1][1].getText()) && !buttons[0][0].getText().equals("")){
             if (buttons[0][0].getText().equals(buttons[2][2].getText())){
                 Toast.makeText(this, buttons[0][0].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
@@ -126,9 +133,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (buttons[0][2].getText().equals(buttons[1][1].getText()) && !buttons[0][2].getText().equals("")){
             if (buttons[0][2].getText().equals(buttons[2][0].getText())){
                 Toast.makeText(this, buttons[0][2].getText().toString() +" Won", Toast.LENGTH_SHORT).show();
+                resetButtons();
                 return;
             }
         }
-
+    }
+    void resetButtons(){
+        for (int i=0 ; i<3 ; i++){
+            for (int j=0 ; j<3 ; j++){
+                buttons[i][j].setText("");
+            }
+        }
     }
 }
